@@ -26,7 +26,7 @@ $.getJSON("https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference
         tableData.push({
             "PLAYER_NAME": feat[i].name
         });
-    }
+    } 
 
     table.appendRows(tableData);
     doneCallback();
