@@ -24,7 +24,7 @@ $.getJSON("https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference
     // Iterate over the JSON object
     for (var i = 0, len = feat.length; i < len; i++) {
         tableData.push({
-            "Player": feat.rowSet[i][1]
+            "Player": feat.rowSet[i]
         });
     }
 
