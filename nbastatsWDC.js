@@ -3,7 +3,7 @@
 
     myConnector.getSchema = function (schemaCallback) {
     var cols = [{
-        id: "id",
+        id: "DEF_RATING",
         dataType: tableau.dataTypeEnum.string
     }, {
         id: "mag",
@@ -28,7 +28,7 @@
 };
 
 myConnector.getData = function(table, doneCallback) {
-$.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(resp) {
+$.getJSON("https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=0&LeagueID=00&Location=&MeasureType=Defense&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition=&PlusMinus=N&Rank=N&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=0&TwoWay=0&VsConference=&VsDivision=&Weight=", function(resp) {
     var feat = resp.features,
         tableData = [];
 
