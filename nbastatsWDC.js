@@ -18,13 +18,13 @@
 
 myConnector.getData = function(table, doneCallback) {
 $.getJSON("https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=0&LeagueID=00&Location=&MeasureType=Defense&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition=&PlusMinus=N&Rank=N&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=0&TwoWay=0&VsConference=&VsDivision=&Weight=", function(resp) {
-    var feat = resp.resultSets.rowSet,
+    var feat = resp.resultSets,
         tableData = [];
 
     // Iterate over the JSON object
     for (var i = 0, len = feat.length; i < len; i++) {
         tableData.push({
-            "Player": feat[i][1]
+            "Player": feat.rowSet[i][1]
         });
     }
 
