@@ -9,7 +9,7 @@
 
     var tableSchema = {
         id: "nbastatsdefense",
-        alias: "Defesnive Data",
+        alias: "Defensive Data",
         columns: cols
     };
 
