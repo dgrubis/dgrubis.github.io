@@ -3,7 +3,7 @@
 
     myConnector.getSchema = function (schemaCallback) {
     var cols = [{
-        id: "Player",
+        id: "PLAYER_NAME",
         dataType: tableau.dataTypeEnum.string
     }];
 
@@ -24,7 +24,7 @@ $.getJSON("https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference
     // Iterate over the JSON object
     for (var i = 0, len = feat.length; i < len; i++) {
         tableData.push({
-            "Player": feat[i][1]
+            "PLAYER_NAME": feat[i][1]
         });
     }
 
