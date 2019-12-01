@@ -29,7 +29,7 @@
 
 myConnector.getData = function(table, doneCallback) {
 $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(resp) {
-    var feat = resp.features,
+    var feat = resp.features[0],
         tableData = [];
 
     // Iterate over the JSON object
